@@ -1,0 +1,198 @@
+body
+{
+background-color: #F3F3F3; 
+background-image: url("../Images/bg1.png");
+}
+
+#container{
+width:100%;
+}
+
+#pageHead
+{
+box-shadow: 1px 10px 5px #888888; 
+border-top: 5px solid #000;    
+background-color: #262626;
+border-bottom: 3px solid #00B2FF;
+height: 50px;
+width:1380px;
+margin-left:-10px;
+margin-top:-8px;
+}
+
+#logohead
+{
+width: 550px; 
+height: 50px;
+background-color: #383838;
+border-top: 5px solid #262626;
+margin-top: -5px;
+border-bottom: 5px solid #fff;
+margin-left:auto; 
+margin-right:auto;
+text-align:center;
+}
+
+#content
+{
+float:left;
+width:600px;
+height:300px;
+margin-top:50px;
+margin-left:100px;
+}
+
+#calculator
+{
+float:right;
+width:286px;
+height:330px;
+background:#000000;
+margin-top:50px;
+margin-right:100px;
+border-radius: 15px;
+position:relative;
+}
+
+.display
+{
+padding: 0 4px;
+background-color: #D3E7A7;
+border-style: solid;
+border-width: 1px;
+border-color: #56A257;
+position: relative;
+font-size: 36px;
+width:248px;
+height:43px;
+font-family: Comic Sans;
+font-weight: 900;
+text-align: right;
+}
+
+#tableCalci
+{
+padding: 10px; 
+padding-bottom: 5px; 
+padding-top: 20px;
+border-collapse: separate;
+border-spacing: 10px 0;
+margin-left:auto; 
+margin-right:auto;
+}
+
+h1
+{
+text-shadow: 2px 2px 5px #00B2FF;
+color:white;
+font-family: Geneva,sans-serif;
+font-size: 28px;
+margin-top:8px;
+}
+
+h2
+{
+text-shadow: 2px 2px 5px blue;
+color:white;
+font-family: Geneva,sans-serif;
+font-size: 26px;
+margin-top:8px;
+}
+
+.col-md-6 hr 
+{
+margin-top:-10px;
+height: 10px;
+border: 0;
+box-shadow: inset 0 15px 10px -12px #00B2FF;
+}
+
+#para1
+{
+font-family: Geneva,sans-serif;
+font-size: 16px;
+text-align: justify;
+text-justify: inter-word;
+}
+
+.hover td button:hover{background:blue;color:white;}
+
+.hover td:nth-child(1)
+{
+background:black;
+}
+
+.hover #plus,.hover #minus, .hover #divide, .hover #times
+{
+ background: #FF5F77;
+}
+
+.hover #plus:hover,.hover #times:hover,.hover #minus:hover,.hover #divide:hover,.hover #equal:hover
+{
+background:blue;color:white;
+}
+
+.hover #equal
+{
+background:#FFB225;
+}
+
+.hover td button
+{
+cursor:default;
+background:white;
+width:50px;
+height:35px;
+border-radius: 10px;
+text-align:center;
+font-family:sans-serif;
+font-size:20px;
+}
+
+#list
+{
+font-family: Geneva,sans-serif;
+font-size: 16px;
+}
+
+footer
+{
+    background:#ffdab9;/*#eee8aa;#48d1cc;#f5deb3;#eee8aa;#87cefa;#71B8D7;#ffab62;*/
+    border-top: 3px solid #00B2FF;/*#ff4b02;*/
+    color: #333;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+    width: 100%;
+    height: auto;
+ position: fixed;
+    bottom: 0;
+    left:0;
+    z-index:1;
+    text-align:center;
+}
+
+footer #validator img
+{
+	border:0;width:88px;height:31px;
+}
+
+#validator
+{
+margin-top:-55px;
+margin-left:50px;
+float:left;
+}
+
+.errbox
+{
+	width:100%;
+	float:right;
+}
+
+#err_msg
+{
+height:auto;
+width:auto;
+text-align:right;
+float:right;
+color:red;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>A Simple Calculator using HTML and CSS</title>
+<link href="../../static/calculator/css/calculator.css" type="text/css" rel="Stylesheet" media="all" />
+</head>
+
+<body>
+	<div id="pageHead" >
+		<div id="logohead">
+		<h1>Calci - A Simple Math Calculator</h1>
+		</div>
+	</div>
+
+	<div id="container">
+
+		<div id="content">
+			<h2>Calculator Operations</h2>
+			<hr>
+			<p id="para1">
+				A simple basic math calculator, which is a kind of similar to a small handheld calculator that perform operations such as addition, subtraction, division and multiplication. 
+			<br/><br/>
+				The operations perfomed using this calculator is mentioned below<b>:</b>
+			</p>
+			<ul id="list">
+				<li>Addition (&plus;)</li>
+				<li>Subtraction (&minus;)</li>
+				<li>Multiplication (&times;)</li>
+				<li>Division (&divide;)</li>
+			</ul>
+		</div><!--content-->
+
+ 
+		<form id="calci_form" method="post" action=".">  {% csrf_token %}
+			<input type="hidden" name="val" value="{{a}}"/>
+			<input type="hidden" name="capture" value="{{capture}}"/>
+			<div id="calculator">
+				<table id="tableCalci">
+					<tr  id="row1">
+						<td colspan="4"><input type="text" class="display" name="valueof" value="{{b}}"/></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr class="hover">
+						<td><button id="7" name="num" value="7" type="submit">7</button></td>
+						<td><button id="8" name="num" value="8" type="submit">8</button></td>
+						<td><button id="9" name="num" value="9" type="submit">9</button></td>
+						<td><button id=&plus; name="+" type="submit" value="+">&plus;</button></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr class="hover">
+						<td><button id="4" name="num" value="4" type="submit">4</button></td>
+						<td><button id="5" name="num" value="5" type="submit">5</button></td>
+						<td><button id="6" name="num" value="6" type="submit">6</button></td>
+						<td><button id=&minus; name="-" value="-" type="submit">&minus;</button></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr class="hover">
+						<td><button id="1" name="num" value="1" type="submit">1</button></td>
+						<td><button id="2" name="num" value="2" type="submit">2</button></td>
+						<td><button id="3" name="num" value="3" type="submit">3</button></td>
+						<td><button id=&times; name="*" value="*" type="submit">&times;</button></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr class="hover">
+						<td><button id="0" name="clear" value="C" type="submit">C</button></td>
+						<td><button id="0" name="num" value="0" type="submit">0</button></td>
+						<td><button id=&equals;  name="=" value="=" type="submit">&equals;</button></td>
+						<td><button id=&divide;  name="/" type="submit" value="/"/>&divide;</button></td>
+					</tr>
+				</table>
+			</div><!--calculator-->
+		</form>
+
+		<div class="errbox">
+			<div id="err_msg" name="error">
+				{% for error in errors %}
+					<p>{{error}}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div> <!--Container end-->
+	<footer>
+		<p>
+			Created by: Vivek Sridhar
+		</p>
+		<p>
+			Contact information: <a href="">vsridha1@andrew.cmu.edu</a>
+		</p>
+		<p id="validator">
+			<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+		</p>
+	</footer>
+
+
+</body>
+</html>
